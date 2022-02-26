@@ -1,0 +1,28 @@
+.welcome {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    padding: 10px;
+}
+#btn.begin{
+    padding: 20px 40px;
+}
+.child{
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -50px;
+    border: 1px solid black;
+}
+h2 {
+    text-align: center;
+}
