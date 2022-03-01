@@ -1,15 +1,43 @@
 var countDownTimer;
 var timerInterval;
 var arrayOfQuestions = [];
-const maxTime = 5 * 60 * 1000; //time in seconds
+var gamescore = 0;
+const timePenalty = 30;
+const maxTime = 5 * 60; //time in seconds
 function setCountDownTimer () {
     countDownTimer = maxTime;
+    console.log("CountDownTimer: ", countDownTimer);
 }
 //When the person clicks the begin button, the timer starts
 //Start time
-timerInterval = setInterval(updateTimer, 1000)
+function startTimer(){
+    timerInterval = setInterval(updateTimer, 1000);
+}
 function updateTimer(){
-    countDownTimer = countDownTimer - 1;
+    countDownTimer--;
+    presentTimer();
+}
+
+function presentTimer(){
+    let currentTime = document.getElementById('timer');
+    currentTime.innerText = countDownTimer;
+    console.log("presentTimer: currentTime ", currentTime);
+}
+function showScoreBoard(){
+    let scoreBoard = document.getElementById('score-board');
+    //scoreBoard.classList.toggle('hide',false);
+    scoreBoard.classList.remove('hide');
+
+}
+function showScore(){
+    let currentScore = document.getElementById('score');
+    currentScore.innerText = gamescore;
+    console.log("ShowScore: currentScore ", currentScore);
+}
+function hideGreeting(){
+    let greeting = document.getElementById('greeting');
+    console.log("hideGreeting: greeting", greeting);
+    greeting.classList.add('hide');
 }
 //question is asked
 function SetupQuestions(){
@@ -36,17 +64,59 @@ function SetupQuestions(){
     console.log("SetupQuestions arrayOfQuestions: ", arrayOfQuestions);
 }
 
-function nextQuestion (){
-    for (let i = 0; i < arrayOfQuestions.length; i++) {
+function nextQuestion (questionId){
 
+    let found = false;
+    for (let i = 0; i < arrayOfQuestions.length; i++) {
+        if (questionId == arrayOfQuestions[i].id) {
+            prepareQuestionAndAnswers(i);
+        }
     }
 }
 
-function showQuestion (questionindex){
+function prepareQuestionAndAnswers (questionindex){
     let questionSection = document.getElementById('question');
     let newQuestion = document.createElement("div");
     newQuestion.id = arrayOfQuestions[questionindex].id;
     newQuestion.innerText = arrayOfQuestions[questionindex].question;
-    questionSection.appendChild();
-    questionSection.append()
+    questionSection.appendChild(newQuestion);
+    newQuestion.classList.add('question');
+    
+    if(arrayOfQuestions[questionindex].answer1){
+        let answer = document.createElement('div');
+        let rdoBtn = document.createElement('input');
+        let label = document.createElement('label');
+        
+        rdoBtn.id = `${arrayOfQuestions[questionindex].id}_answer1`;
+        rdoBtn.setAttribute('type','radio');
+        rdoBtn.value = 1;
+        rdoBtn.classList.add('answer');
+        rdoBtn.classList.add('answer') = arrayOfQuestions[questionindex].id;
+        rdoBtn.name = arrayOfQuestions[questionindex].id;
+        
+        label.innerText = arrayOfQuestions[questionindex].answer1;
+        label.setAttribute('for',`${rdoBtn.id}`);
+
+
+        answer.innerText = arrayOfQuestions[questionindex].answer1;
+        answer.classList.add('answer');
+        answer.id= `${arrayOfQuestions[questionindex].id}_answer1`;
+        questionSection.appendChild(answer);
+    }
+    if(arrayOfQuestions[questionindex].answer2){
+        let answer = document.createElement('div');
+        answer.innerText = arrayOfQuestions[questionindex].answer2;
+        answer.classList.add('answer');
+        answer.id= `${arrayOfQuestions[questionindex].id}_answer2`;
+        questionSection.appendChild(answer);
+    }
+}
+function doGame(){
+    setCountDownTimer();
+    startTimer();
+    hideGreeting();
+    showScoreBoard();
+    presentTimer();
+    showScore();
+    prepareQuestionAndAnswers(i);
 }

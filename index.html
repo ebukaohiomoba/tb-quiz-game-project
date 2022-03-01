@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <div class="welcome center">
-        <div class= "child">
+    <div class="main center">
+        <div id="greeting" class= "welcome">
         <p>Test your front end developer skills by answering the following questions</p>
-        <form><button id = "btnBegin" formaction="/question.html" type="submit">Begin</button></form>
-        </div>
+        <!-- <form><button id = "btnBegin" formaction="/question.html" type="submit">Begin</button></form> -->
+        <button id = "btnBegin" onclick="doGame()">Begin</button></form>
+        </a>
+    </div>
+    <div id="score-board" class="hide">
+        <div id="timercontainer">Time remaining: <span id="timer" style="text-align: left"> </span></div>
+        <div id="scorecontainer">Score: <span id = "score" style="text-align: right"> </span> </div>
+    </div>
+    <div id="questions">
+        <input id = "quest0_answer1">
+    </div>
     </div>
 </body>
 </html>

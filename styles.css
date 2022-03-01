@@ -1,22 +1,23 @@
-.welcome {
+.main {
     border: 1px solid black;
     display:flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 .center{
-    display: flex;
+    display:flex;
     justify-content: center;
-    align-items: center;
+
 }
 p {
     padding: 10px;
 }
 #btn.begin{
-    padding: 20px 40px;
+    padding: 20px 30px;
 }
-.child{
+.welcome{
     position: absolute;
     top: 50%;
     height: 100px;
@@ -27,5 +28,16 @@ h2 {
     text-align: center;
 }
 .question {
-    text-align: center;
+    color:black;
+}
+.hide{
+    display: none;
+}
+.answer{
+    color:blue;
+}
+div.answer:hover,
+div.answer:active{
+    color:white;
+    background-color: blue;
 }
