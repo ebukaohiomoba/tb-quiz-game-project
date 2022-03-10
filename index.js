@@ -1,7 +1,7 @@
-var countDownTimer;
-var timerInterval;
-var arrayOfQuestions = [];
-var gamescore = 0;
+let countDownTimer;
+let timerInterval;
+let arrayOfQuestions = [];
+let gamescore = 0;
 const timePenalty = 30;
 const maxTime = 5 * 60; //time in seconds
 function setCountDownTimer () {
