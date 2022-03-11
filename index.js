@@ -2,8 +2,12 @@ let countDownTimer;
 let timerInterval;
 let arrayOfQuestions = [];
 let gamescore = 0;
+let highScores = [];
 const timePenalty = 30;
 const maxTime = 5 * 60; //time in seconds
+
+
+
 function setCountDownTimer () {
     countDownTimer = maxTime;
     console.log("CountDownTimer: ", countDownTimer);
