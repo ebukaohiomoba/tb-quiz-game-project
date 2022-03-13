@@ -1,17 +1,23 @@
+let timerKey = 'timer';
+const maxTime = 1000 * 60 * 5; //time in seconds
+const timePenalty = 30;
 let countDownTimer;
 let timerInterval;
 let arrayOfQuestions = [];
 let gamescore = 0;
 let highScores = [];
-const timePenalty = 30;
-const maxTime = 5 * 60; //time in seconds
 
 
 
-function setCountDownTimer () {
-    countDownTimer = maxTime;
-    console.log("CountDownTimer: ", countDownTimer);
+function setUpTimer() {
+    //clear the timer from localstorage
+    localStorage.removeItem(timerKey);
+    //set timer in local storage to sOriginalTime
+    localStorage.setItem(timerKey, `${sOriginalTime}`);
+    console.log("setUpTimer timerKey ", timerKey);
+    console.log("setUpTimer sOriginalTime ", sOriginalTime);
 }
+
 //When the person clicks the begin button, the timer starts
 //Start time
 function startTimer(){
