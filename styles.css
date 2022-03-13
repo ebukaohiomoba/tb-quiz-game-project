@@ -1,15 +1,23 @@
 .main {
-    border: 1px solid black;
-    display:flex;
-    flex-direction: column;
+    width: 100vh;
+    border: 1px solid #2d2d2d;
+    display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    height: 100vh;
+    border: none;
+    background-color: peru;
+  }
+.scoreboard {
+    text-align: center;
 }
-.center{
-    display:flex;
-    justify-content: center;
-
+.gameboard{
+    
+    background-color:white;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 50px;
 }
 p {
     padding: 10px;
@@ -17,13 +25,7 @@ p {
 #btn.begin{
     padding: 20px 30px;
 }
-.welcome{
-    position: absolute;
-    top: 50%;
-    height: 100px;
-    margin-top: -50px;
-    border: 1px solid black;
-}
+
 h2 {
     text-align: center;
 }
@@ -34,7 +36,7 @@ h2 {
     display: none;
 }
 .answer{
-    color:blue;
+    color:red;
 }
 div.answer:hover,
 div.answer:active{

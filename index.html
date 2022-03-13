@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js" defer></script>
 </head>
 <body>
-    <div class="main center">
-        <div id="greeting" class= "welcome">
-        <p>Test your front end developer skills by answering the following questions</p>
-        <!-- <form><button id = "btnBegin" formaction="/question.html" type="submit">Begin</button></form> -->
-        <button id = "btnBegin" onclick="doGame()">Begin</button></form>
-        </a>
+    <div id="score-board" class="scoreboard">
+        <div id="timerContainer" class="">Seconds Remaining: <span id="timer"></span></div>
+        <div id="scoreContainer" class="">Score: <span id="score"></span></div>
     </div>
-    <div id="score-board" class="hide">
-        <div id="timercontainer">Time remaining: <span id="timer" style="text-align: left"> </span></div>
-        <div id="scorecontainer">Score: <span id = "score" style="text-align: right"> </span> </div>
+    <div id="titleSection" class="main">
+        <div id="game-board" class="gameboard">
+            <div id="welcome" class="">
+                <div>
+                    <span>Test your front end developer skills by answering the following questions.</span>
+                </div>
+                <div>
+                    <button id="start-quiz" onclick="doGame();">Begin</button>
+                </div>
+        </div>
+        <br />
+        <div id="questions" class="questions hide">
+        </div>
+        <div id="enterHighScore" class="hide">
+            <div>Save Your Score</div>
+            <label for="tbInitials">Enter your Initials</label>
+            <input type="text" id="tbInitials" placeholder="Initials here">
+            <button id="bEnterHighScore" onclick="addScore();">Submit</button>
+        </div>
+        <div id="high-scores" class="hide">
+            <div>High Scores</div>
+        </div>
+
     </div>
-    <div id="questions">
-        <input id = "quest0_answer1">
     </div>
-    </div>
+    
 </body>
 </html>
