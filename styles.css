@@ -1,18 +1,19 @@
 .main {
-    width: 100vh;
-    border: 1px solid #2d2d2d;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     border: none;
     background-color: peru;
+    flex-direction: column;
   }
 .scoreboard {
     text-align: center;
 }
 .gameboard{
-    
+    width: 70%;
+    height: 400px;
     background-color:white;
 }
 body {
@@ -31,12 +32,14 @@ h2 {
 }
 .question {
     color:black;
+    font-size: 25px;
 }
 .hide{
     display: none;
 }
 .answer{
-    color:red;
+    color:black;
+    font-size: 15px;
 }
 div.answer:hover,
 div.answer:active{
