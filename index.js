@@ -253,17 +253,17 @@ function setupQuestionsAndAnswers() {
     let question1 = {
         id:"quest0", 
         question:"To select elements with a specific class: ", 
-        answer1:" write a semicolon (;) character, followed by the class name.", 
-        answer2:" write a period (.) character, followed by the class name.", 
-        answer3:" write a period (.) character", 
-        answer4:"write a comma (,) character", 
+        answer1:" Write a semicolon (;) character, followed by the class name.", 
+        answer2:" Write a period (.) character, followed by the class name.", 
+        answer3:" Write a period (.) character", 
+        answer4:"Write a comma (,) character", 
         correctAnswer:2
     };
     let question2 = {
         id:"quest1", 
         question:"In CSS, a color can be specified by using a predefined color name.", 
-        answer1:"yes", 
-        answer2:"no", 
+        answer1:"Yes", 
+        answer2:"No", 
         answer3:null, 
         answer4:null, 
         correctAnswer:1
@@ -271,18 +271,18 @@ function setupQuestionsAndAnswers() {
     let question3 = {
         id:"quest2", 
         question:"To horizontally center a block element", 
-        answer1:"width: auto", 
-        answer2:"border: auto", 
-        answer3:"padding: auto", 
-        answer4:"margin: auto", 
+        answer1:"Width: auto", 
+        answer2:"Border: auto", 
+        answer3:"Padding: auto", 
+        answer4:"Margin: auto", 
         correctAnswer:4
     };
     let question4 = {
         id:"quest3", 
         question:"Use the _____ property to determine the width of the input field:", 
-        answer1:"width", 
-        answer2:"height", 
-        answer3:"margin", 
+        answer1:"Width", 
+        answer2:"Height", 
+        answer3:"Margin", 
         answer4:null, 
         correctAnswer:1
     };
@@ -501,7 +501,6 @@ function showHighScores() {
     ? JSON.parse(localStorage.getItem(highScoreKey))
     : [];
 
-    //remove this line when you have updated the code.
 
     let i=0;
     while(i<hScores.length ) {

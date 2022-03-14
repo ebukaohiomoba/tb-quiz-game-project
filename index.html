@@ -14,14 +14,17 @@
 </head>
 <body>
     <div id="score-board" class="scoreboard">
-        <div id="timerContainer" class="">Seconds Remaining: <span id="timer"></span></div>
-        <div id="scoreContainer" class="">Score: <span id="score"></span></div>
+        <p style="text-align: left;">Seconds Remaining:   <span id="timer"></span> </p>
+        <p style="float: right;">Score: <span id="score"></span></p>
     </div>
     <div id="titleSection" class="main">
         <div id="game-board" class="gameboard">
             <div id="welcome" class="">
-                <div>
-                    <span>Test your front end developer skills by answering the following questions.</span>
+                <div id="header-box">
+                    <h1>Test your front end developer skills by answering the following questions.</h1>
+                </div>
+                <div id = "directions-box">
+                    <h2>Please answer the following CSS questions within the alloted time. Incorrect answers will reduce your time remaining by 5 seconds!</h2> 
                 </div>
                 <div>
                     <button id="start-quiz" onclick="doGame();">Begin</button>
@@ -42,6 +45,8 @@
 
     </div>
     </div>
-    
+    <footer>
+        Created by Ebuka Ohiomoba
+    </footer>   
 </body>
 </html>

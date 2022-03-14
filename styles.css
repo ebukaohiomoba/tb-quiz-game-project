@@ -1,30 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* To make use of full height of page*/
+    min-height: 100vh;
+    margin: 0;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
 .main {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:80vh;
     border: none;
     background-color: peru;
     flex-direction: column;
+    text-align: center;
   }
 .scoreboard {
+    display: flex;
     text-align: center;
+    background-color:white;
+    padding: 30px;
 }
 .gameboard{
     width: 70%;
     height: 400px;
     background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 }
-body {
-    font-family: 'Roboto', sans-serif;
-    padding-bottom: 50px;
+
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 15px;
+
 }
 p {
-    padding: 10px;
+    padding: 20px;
 }
-#btn.begin{
-    padding: 20px 30px;
+
+
+button{
+    background: peru;
+    color: white;
+    width: 150px;
+    line-height: 2.3em;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
 }
 
 h2 {
@@ -33,6 +72,7 @@ h2 {
 .question {
     color:black;
     font-size: 25px;
+    padding-bottom: 20px;
 }
 .hide{
     display: none;
@@ -44,5 +84,12 @@ h2 {
 div.answer:hover,
 div.answer:active{
     color:white;
-    background-color: blue;
+    background-color: #ebd3be;
+}
+footer{
+    padding: 20px;
+    text-align: center;
+}
+#header-box, #directions-box{
+    padding-bottom: 20px;
 }
